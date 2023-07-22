@@ -1,0 +1,14 @@
+{
+  "name": "webpack-optimize",
+  "version": "1.0.0",
+  "description": "Webpack-5 configuration for production",
+  "main": "index.js",
+  "repository": "https://github.com/MAbdurahman/webpack-optimize.git",
+  "author": "Mahdi Abdurrahman <mdbdrrhm@gmail.com>",
+  "license": "MIT",
+  "scripts": {},
+  "devDependencies": {
+    "webpack": "5.75.0",
+    "webpack-cli": "5.0.1"
+  }
+}
