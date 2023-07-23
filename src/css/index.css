@@ -1,0 +1,29 @@
+
+
+
+
+/* ==========================================
+              button
+============================================= */
+.button {
+    padding: 16px 32px;
+    border: 3px solid #1d8ace;;
+    border-radius: 5px;
+    color: #1d8ace;
+    background-color: #d9d9d9;
+    font-size: medium;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.button:hover {
+    color: #f2f2f2;
+    background: #1d8ace radial-gradient(circle, transparent 1%, #1d8ace 1%) center/15000%;
+}
+
+.button:active {
+    background-color: #095b8d;
+    background-size: 100%;
+    transition: all 0s;
+}
