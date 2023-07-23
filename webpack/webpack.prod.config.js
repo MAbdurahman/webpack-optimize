@@ -14,10 +14,10 @@ module.exports = merge(common, {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash:12].css',
+      filename: 'css/[name].[contenthash:12].css',
     })
   ],
   output: {
-    filename: '[name].[contenthash:12].js'
+    filename: 'js/[name].[contenthash:12].js'
   },
 });

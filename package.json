@@ -11,6 +11,7 @@
     "dev": "webpack serve --config webpack/webpack.dev.config.js --hot"
   },
   "devDependencies": {
+    "clean-webpack-plugin": "4.0.0",
     "css-loader": "6.7.1",
     "html-loader": "4.2.0",
     "html-webpack-plugin": "5.5.1",
