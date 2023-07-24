@@ -26,7 +26,7 @@ module.exports = merge(common, {
       {
         test: /\.css$/,
         exclude: /\.module\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
+        use: [MiniCssExtractPlugin.loader, 'styles-loader']
       },
       {
         test: /\.css$/,
@@ -34,7 +34,7 @@ module.exports = merge(common, {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader',
+            loader: 'styles-loader',
             options: {
               modules: {
                 localIdentName: '[hash:base64]'
@@ -42,6 +42,10 @@ module.exports = merge(common, {
             }
           }
         ]
+      },
+      {
+        test: /\.scss$/,
+        use: [ MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader' ],
       }
     ]
   },

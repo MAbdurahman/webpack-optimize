@@ -23,7 +23,7 @@ module.exports = merge(common, {
       {
         test: /\.css$/,
         exclude: /\.module\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'styles-loader']
       },
       {
         test: /\.css$/,
@@ -31,7 +31,7 @@ module.exports = merge(common, {
         use: [
           'style-loader',
           {
-            loader: 'css-loader',
+            loader: 'styles-loader',
             options: {
               modules: {
                 localIdentName: '[local]--[md4:hash:7]'
@@ -39,6 +39,10 @@ module.exports = merge(common, {
             }
           }
         ]
+      },
+      {
+        test: /\.scss$/,
+        use: [ 'style-loader', 'css-loader', 'sass-loader' ]
       }
     ]
   },

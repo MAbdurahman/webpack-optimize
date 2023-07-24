@@ -1,5 +1,5 @@
 
-import style from './../../css/index.css';
+import './../../styles/index.scss';
 
 const button2 = document.createElement('button');
 
