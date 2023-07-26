@@ -46,8 +46,9 @@ $clr-neutral-700: hsla(0, 0%, 19%, 100%);
 $clr-neutral-800: hsla(0, 0%, 7%, 100%);
 
 body {
-    color: $clr-neutral-600;
+    font-family: 'Abril Fatface', cursive;
     font-size: 1rem;
+    color: $clr-neutral-600;
     /*display: grid;*/
     transition: all .5s;
     user-select: none;
@@ -70,6 +71,7 @@ body {
     font-size: medium;
     font-weight: bold;
     text-transform: uppercase;
+    letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.5s;
 }
