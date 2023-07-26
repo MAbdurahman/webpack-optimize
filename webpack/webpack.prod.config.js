@@ -49,6 +49,32 @@ module.exports = merge(common, {
       {
         test: /\.scss$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader']
+      },
+      {
+        test: /\.(png|jpg|svg)$/,
+        type: 'asset',
+        parser: {
+          dataUrlCondition: {
+            maxSize: 10 * 1024 // 10 kb
+          }
+        },
+        generator: {
+          filename: './assets/img/[name].[contenthash:12][ext]'
+        },
+        use: [
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              mozjpeg: {
+                quality: 40,
+              },
+              pngquant: {
+                quality: [0.65, 0.90],
+                speed: 4
+              }
+            }
+          }
+        ]
       }
     ]
   },
