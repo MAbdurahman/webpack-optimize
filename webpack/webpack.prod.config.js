@@ -61,6 +61,7 @@ module.exports = merge(common, {
             ],
           },
         },
+        
       })
     ]
   },
@@ -101,7 +102,6 @@ module.exports = merge(common, {
         generator: {
           filename: './assets/img/[name].[contenthash:12][ext]'
         }
-        
       }
     ]
   },
