@@ -9,6 +9,7 @@ const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
 module.exports = merge(common, {
   mode: 'production',
+  devtool: 'source-map',
   optimization: {
     minimize: true,
     minimizer: [
