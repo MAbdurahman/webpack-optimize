@@ -88,3 +88,97 @@ $clr-semantic-w-400: hsla(48, 96%, 50%, 100%);
 $clr-semantic-w-300: hsla(48, 96%, 55%, 100%);
 $clr-semantic-w-200: hsla(48, 96%, 60%, 100%);
 $clr-semantic-w-100: hsla(48, 96%, 65%, 100%);
+
+$primary-colors: (
+        'clr-primary-100': $clr-primary-100,
+        'clr-primary-200': $clr-primary-200,
+        'clr-primary-300': $clr-primary-300,
+        'clr-primary-400': $clr-primary-400,
+        'clr-primary-500': $clr-primary-500,
+        'clr-primary-600': $clr-primary-600,
+        'clr-primary-700': $clr-primary-700,
+        'clr-primary-800': $clr-primary-800
+);
+
+$secondary-colors: (
+        'clr-secondary-100': $clr-secondary-100,
+        'clr-secondary-200': $clr-secondary-200,
+        'clr-secondary-300': $clr-secondary-300,
+        'clr-secondary-400': $clr-secondary-400,
+        'clr-secondary-500': $clr-secondary-500,
+        'clr-secondary-600': $clr-secondary-600,
+        'clr-secondary-700': $clr-secondary-700,
+        'clr-secondary-800': $clr-secondary-800
+);
+
+$tertiary-colors: (
+        'clr-tertiary-100': $clr-tertiary-100,
+        'clr-tertiary-200': $clr-tertiary-200,
+        'clr-tertiary-300': $clr-tertiary-300,
+        'clr-tertiary-400': $clr-tertiary-400,
+        'clr-tertiary-500': $clr-tertiary-500,
+        'clr-tertiary-600': $clr-tertiary-600,
+        'clr-tertiary-700': $clr-tertiary-700,
+        'clr-tertiary-800': $clr-tertiary-800
+);
+
+$accent-colors: (
+        'clr-accent-100': $clr-accent-100,
+        'clr-accent-200': $clr-accent-200,
+        'clr-accent-300': $clr-accent-300,
+        'clr-accent-400': $clr-accent-400,
+        'clr-accent-500': $clr-accent-500,
+        'clr-accent-600': $clr-accent-600,
+        'clr-accent-700': $clr-accent-700,
+        'clr-accent-800': $clr-accent-800
+);
+
+$neutral-colors: (
+        'clr-neutral-100': $clr-neutral-100,
+        'clr-neutral-200': $clr-neutral-200,
+        'clr-neutral-300': $clr-neutral-300,
+        'clr-neutral-400': $clr-neutral-400,
+        'clr-neutral-500': $clr-neutral-500,
+        'clr-neutral-600': $clr-neutral-600,
+        'clr-neutral-700': $clr-neutral-700,
+        'clr-neutral-800': $clr-neutral-800
+);
+
+$augmented-colors: (
+        'clr-augmented-100': $clr-augmented-100,
+        'clr-augmented-200': $clr-augmented-200,
+        'clr-augmented-300': $clr-augmented-300,
+        'clr-augmented-400': $clr-augmented-400,
+        'clr-augmented-500': $clr-augmented-500,
+        'clr-augmented-600': $clr-augmented-600,
+        'clr-augmented-700': $clr-augmented-700,
+        'clr-augmented-800': $clr-augmented-800
+);
+
+$semantic-alert-colors: (
+        'clr-semantic-a-100': $clr-semantic-a-100,
+        'clr-semantic-a-200': $clr-semantic-a-200,
+        'clr-semantic-a-300': $clr-semantic-a-300,
+        'clr-semantic-a-400': $clr-semantic-a-400
+);
+
+$semantic-inform-colors: (
+        'clr-semantic-i-100': $clr-semantic-i-100,
+        'clr-semantic-i-200': $clr-semantic-i-200,
+        'clr-semantic-i-300': $clr-semantic-i-300,
+        'clr-semantic-i-400': $clr-semantic-i-400
+);
+
+$semantic-success-colors: (
+        'clr-semantic-s-100': $clr-semantic-s-100,
+        'clr-semantic-s-200': $clr-semantic-s-200,
+        'clr-semantic-s-300': $clr-semantic-s-300,
+        'clr-semantic-s-400': $clr-semantic-s-400
+);
+
+$semantic-warn-color: (
+        'clr-semantic-w-100': $clr-semantic-w-100,
+        'clr-semantic-w-200': $clr-semantic-w-200,
+        'clr-semantic-w-300': $clr-semantic-w-300,
+        'clr-semantic-w-400': $clr-semantic-w-400
+);
