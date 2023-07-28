@@ -1,0 +1,130 @@
+/*=============================================
+          abstracts/_mixins.scss
+================================================*/
+@use './variables' as var;
+@use './functions' as func;
+
+//**************** align element ****************//
+@mixin align-element($position: 'both') {
+  @if ($position == 'horizontal') {
+    left: 50%;
+    right: auto;
+    @include vendor-prefix-one(transform, translateX(-50%), webkit);
+
+  } @else if ($position == 'vertical') {
+    top: 50%;
+    bottom: auto;
+    @include vendor-prefix-one(transform, translateY(-50%), webkit);
+
+  } @else {
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    @include vendor-prefix-one(transform, translate(-50%, -50%), webkit);
+
+  }
+}
+
+
+
+
+
+//**************** center position ****************//
+@mixin center-position($position) {
+  position: absolute;
+
+  @if $position == 'vertical' {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+  } @else if $position == 'horizontal' {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+
+  } @else if $position == 'both' {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+  }
+}
+
+//**************** flex mixins ****************//
+@mixin enable-flex-center($direction: false) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @if $direction {
+    flex-direction: column;
+  }
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-center-column {
+  @include flex-center;
+  flex-direction: column;
+}
+
+@mixin flex-center-vertical {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center-horizontal {
+  display: flex;
+  justify-content: center;
+}
+
+//**************** media-queries ****************//
+@mixin responsive-max-width($max-width) {
+  @media only screen and (max-width: $max-width) {
+    @content;
+  }
+
+}
+
+@mixin responsive-min-width($min-width) {
+  @media only screen and (min-width: $min-width) {
+    @content;
+  }
+
+}
+
+//**************** vendor prefixes ****************//
+@mixin vendor-prefix-one($property, $value, $vendors: webkit moz ms o) {
+  @if $vendors {
+    @each $vendor in $vendors {
+      #{"-" + $vendor + "-" + $property}: #{$value};
+    }
+  }
+  #{$property}: #{$value};
+}
+
+@mixin vendor-prefix-two($map, $vendors: webkit moz ms o) {
+  @each $prop, $value in $map {
+    @if $vendors {
+      @each $vendor in $vendors {
+        #{"-" + $vendor + "-" + $prop}: #{$value};
+      }
+    }
+    // Dump regular property anyway
+    #{$prop}: #{$value};
+  }
+}
