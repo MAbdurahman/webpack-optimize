@@ -1,0 +1,107 @@
+/* =========================================
+            _functions.scss
+============================================ */
+@use 'sass:math';
+@use './variables' as var;
+
+@function convert-to-rem($pixel) {
+  @if (math.is-unitless($pixel)) {
+    @return math.div($pixel, 16) + rem;
+
+  } @else {
+    @error 'Units are not allowed in convert-to-rem function!';
+
+  }
+}
+
+@function convert-to-em($pixel) {
+  @if (math.is-unitless($pixel)) {
+    @return math.div($pixel, 16) + em;
+
+  } @else {
+    @error 'Units are not allowed in convert-to-em function!';
+
+  }
+}
+
+@function set-primary-color($color-name) {
+  @if not map-has-key(var.$primary-colors, $color-name) {
+    @error 'No color named `#{$color-name}` in $primary-colors!  '
+      + 'Color should be one of the following: `#{map-keys(var.$primary-colors)}`.';
+  }
+  @return map-get(var.$primary-colors, $color-name);
+}
+
+@function set-secondary-color($color-name) {
+  @if not map-has-key(var.$secondary-colors, $color-name) {
+    @error 'No color named `#{$color-name}` in $secondary-colors!  '
+      + 'Color should be one of the following: `#{map-keys(var.$secondary-colors)}`.';
+  }
+  @return map-get(var.$secondary-colors, $color-name);
+}
+
+@function set-tertiary-color($color-name) {
+  @if not map-has-key(var.$tertiary-colors, $color-name) {
+    @error 'No color named `#{$color-name}` in $tertiary-colors!  '
+      + 'Color should be one of the following: `#{map-keys(var.$tertiary-colors)}`.';
+  }
+  @return map-get(var.$tertiary-colors, $color-name);
+}
+
+@function set-accent-color($color-name) {
+  @if not map-has-key(var.$accent-colors, $color-name) {
+    @error 'No color named `#{$color-name}` in $accent-colors!  '
+      + 'Color should be one of the following: `#{map-keys(var.$accent-colors)}`.';
+  }
+  @return map-get(var.$accent-colors, $color-name);
+}
+
+@function set-neutral-color($color-name) {
+  @if not map-has-key(var.$neutral-colors, $color-name) {
+    @error 'No color named `#{$color-name}` in $neutral-colors!  '
+      + 'Color should be one of the following: `#{map-keys(var.$neutral-colors)}`.';
+  }
+  @return map-get(var.$neutral-colors, $color-name);
+}
+
+@function set-augmented-color($color-name) {
+  @if not map-has-key(var.$augmented-colors, $color-name) {
+    @error 'No color named `#{$color-name}` in $augmented-colors!  '
+      + 'Color should be one of the following: `#{map-keys(var.$augmented-colors)}`.';
+  }
+  @return map-get(var.$augmented-colors, $color-name);
+
+}
+
+
+@function set-semantic-alert-color($color-name) {
+  @if not map-has-key(var.$semantic-alert-colors, $color-name) {
+    @error 'No color named `#{$color-name}` in $semant-alert-colors!  '
+      + 'Color should be one of the following: `#{map-keys(var.$semantic-alert-colors)}`.';
+  }
+  @return map-get(var.$semantic-alert-colors, $color-name);
+}
+
+@function set-semantic-inform-color($color-name) {
+  @if not map-has-key(var.$semantic-inform-colors, $color-name) {
+    @error 'No color named `#{$color-name}` in $semantic-inform-colors!  '
+      + 'Color should be one of the following: `#{map-keys(var.$semantic-inform-colors)}`.';
+  }
+  @return map-get(var.$semantic-inform-colors, $color-name);
+}
+
+@function set-semantic-success-color($color-name) {
+  @if not map-has-key(var.$semantic-success-colors, $color-name) {
+    @error 'No color named `#{$color-name}` in $semantic-success-colors!  '
+      + 'Color should be one of the following: `#{map-keys(var.$semantic-success-colors)}`.';
+  }
+  @return map-get(var.$semantic-success-colors, $color-name);
+}
+
+@function set-semantic-warn-color($color-name) {
+  @if not map-has-key(var.$semantic-success-colors, $color-name) {
+    @error 'No color named `#{$color-name}` in $semantic-success-colors!  '
+      + 'Color should be one of the following: `#{map-keys(var.$semantic-success-colors)}`.';
+  }
+  @return map-get(var.$semantic-success-colors, $color-name);
+}
