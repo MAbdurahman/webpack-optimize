@@ -197,3 +197,18 @@ $assigned-colors: (
         'clr-text-medium': $clr-augmented-700,
         'clr-text-light': $clr-augmented-600
 );
+
+//**************** fonts ****************//
+$ff-primary-font: 'Alegreya', serif;
+$ff-secondary-font: 'Alegreya Sans', sans-serif;
+$ff-small-capitals: 'Alegreya Sans SC', sans-serif;
+
+$fw-font-weight-normal: 400;
+$fw-font-weight-medium: 500;
+$fw-font-weight-bold: 700;
+
+$font-families: (
+        "ff-body-font": $ff-secondary-font,
+        "ff-heading-font": $ff-primary-font,
+        "ff-small-caps-font": $ff-small-capitals
+);
