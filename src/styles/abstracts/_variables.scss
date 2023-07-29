@@ -182,3 +182,18 @@ $semantic-warn-color: (
         'clr-semantic-w-300': $clr-semantic-w-300,
         'clr-semantic-w-400': $clr-semantic-w-400
 );
+
+$assigned-colors: (
+        'clr-primary-color': $clr-primary-800,
+        'clr-secondary-color': $clr-secondary-800,
+        'clr-tertiary-color': $clr-tertiary-800,
+        'clr-accent-color': $clr-accent-800,
+        'clr-background-color': $clr-primary-100,
+        'clr-textfield-inactive': $clr-neutral-500,
+        'clr-textfield-active': $clr-neutral-300,
+        'clr-input-inactive': $clr-neutral-400,
+        'clr-input-active': $clr-neutral-200,
+        'clr-text-dark': $clr-augmented-800,
+        'clr-text-medium': $clr-augmented-700,
+        'clr-text-light': $clr-augmented-600
+);
