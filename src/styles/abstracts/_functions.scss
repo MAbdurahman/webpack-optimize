@@ -105,3 +105,11 @@
   }
   @return map-get(var.$semantic-success-colors, $color-name);
 }
+
+@function set-assigned-color($color-name) {
+  @if not map-has-key(var.$assigned-colors, $color-name) {
+    @error 'No color named `#{$color-name}` in $assigned-colors!  '
+      + 'Color should be one of the following: `#{map-keys(var.$assigned-colors)}`.';
+  }
+  @return map-get(var.$assigned-colors, $color-name);
+}
