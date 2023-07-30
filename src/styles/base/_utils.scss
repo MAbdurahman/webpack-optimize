@@ -1,7 +1,8 @@
 /* ==========================================
               _utils.scss
 ============================================= */
-@use './../abstracts' as ab;
+@use './../abstracts/functions' as func;
+@use './../abstracts/variables' as var;
 @use './animations' as anim;
 
 .ma-container-fluid {
@@ -67,9 +68,9 @@
   height: auto;
   line-height: 1.42857143;
   /*background-color: ab.set-color(clr-gray-01);*/
-  background-color: ab.set-neutral-color(ab.$clr-neutral-700);
+  background-color: func.set-neutral-color(clr-neutral-700);
   /*border: 1px solid ab.set-color(clr-gray-03);*/
-  border: 1px solid ab.set-neutral-color(ab.$clr-neutral-300);
+  border: 1px solid func.set-neutral-color(clr-neutral-300);
   border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -116,8 +117,9 @@
   text-align: center;
   margin-bottom: .5em;
   /*font-family: ab.$ff-secondary-font;*/
-  font-family: ab.$ff-primary-font;
-  color: ab.set-color(clr-off-black);
+  font-family: var.$ff-primary-font;
+  /*color: ab.set-color(clr-off-black);*/
+  color: func.set-neutral-color(clr-neutral-700);
   letter-spacing: 0.5rem;
 }
 
@@ -181,7 +183,7 @@
 [class*='imghvr-']:before figure {
   font-size: 1rem;
   line-height: 1.6;
-  background-color: ab.set-neutral-color(ab.$clr-neutral-700) !important;
+  background-color: func.set-neutral-color(clr-neutral-700) !important;
   cursor: pointer;
   transition: all 0.5 ease-in-out;
 
@@ -206,8 +208,8 @@
   max-width: 100%;
 
 
-  background-color: ab.set-neutral-color(ab.$clr-neutral-700) !important;
-  color: ab.$clr-neutral-100;
+  background-color: func.set-neutral-color(clr-neutral-700) !important;
+  color: var.$clr-neutral-100;
   overflow: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -218,7 +220,7 @@
 
 [class^='imghvr-'] figcaption, [class*=' imghvr-'] figcaption {
   /*background-color: ab.set-color(clr-gray-07);*/
-  background-color: ab.set-neutral-color(ab.$clr-neutral-700);
+  background-color: func.set-neutral-color(clr-neutral-700);
   position: absolute;
   padding: 30px;
   position: absolute;
@@ -226,14 +228,14 @@
   bottom: 0;
   left: 0;
   right: 0;
-  color: ab.$clr-neutral-100 !important;
+  color: var.$clr-neutral-100 !important;
 }
 
 
 [class^='imghvr-shutter-out-']:before, [class*=' imghvr-shutter-out-']:before {
   background: #135796;
   /*background: ab.set-color(clr-gray-07);*/
-  background-color: ab.set-neutral-color(ab.$clr-neutral-700);
+  background-color: func.set-neutral-color(clr-neutral-700);
   position: absolute;
   content: '';
   -webkit-transition-delay: 0.105s;
