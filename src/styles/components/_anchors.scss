@@ -1,0 +1,28 @@
+/*=============================================
+          components/_anchors.scss
+================================================*/
+@use './../abstracts' as ab;
+
+
+.anchor--one {
+  @include ab.anchor-default();
+}
+
+.anchor--two {
+  @include ab.anchor-two-styles();
+}
+
+.anchor--three {
+  @include ab.anchor-three-styles();
+
+}
+
+.anchor--four {
+  @include ab.anchor-four-styles();
+
+}
+
+.anchor-outline {
+  @include ab.anchor-outline-styles();
+
+}
