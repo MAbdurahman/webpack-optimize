@@ -201,7 +201,8 @@ $assigned-colors: (
 //**************** fonts ****************//
 $ff-primary-font: 'Alegreya', serif;
 $ff-secondary-font: 'Alegreya Sans', sans-serif;
-$ff-small-capitals: 'Alegreya Sans SC', sans-serif;
+$ff-small-capitals-sans: 'Alegreya Sans SC', sans-serif;
+$ff-small-capitals-serif: 'Alegreya SC', serif;
 
 $fw-font-weight-normal: 400;
 $fw-font-weight-medium: 500;
@@ -210,5 +211,6 @@ $fw-font-weight-bold: 700;
 $font-families: (
         "ff-body-font": $ff-secondary-font,
         "ff-heading-font": $ff-primary-font,
-        "ff-small-caps-font": $ff-small-capitals
+        "ff-small-caps-font-sans": $ff-small-capitals-sans,
+        'ff-small-caps-font-serif': $ff-small-capitals-serif
 );

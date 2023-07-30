@@ -39,7 +39,7 @@
   &:hover,
   &:focus {
     cursor: pointer;
-    color: func.set-neutral-color(var.$clr-neutral-200);
+    color: func.set-neutral-color(clr-neutral-200);
     background-color: darken($bg-color, 50%);
   }
 
@@ -58,7 +58,7 @@
   &:hover,
   &:focus {
     cursor: pointer;
-    color: func.set-neutral-color(var.$clr-neutral-200);
+    color: func.set-neutral-color(clr-neutral-200);
     background-color: $bg-color;
   }
 }
@@ -94,18 +94,18 @@
 }
 
 @mixin anchor-two-styles {
-  @include anchor-default(func.set-neutral-color(var.$clr-neutral-500));
-  @include background-transition-basic(func.set-neutral-color(var.$clr-neutral-600), func.set-neutral-color(var.$clr-neutral-500));
+  @include anchor-default(func.set-neutral-color(clr-neutral-500));
+  @include background-transition-basic(func.set-neutral-color(clr-neutral-600), func.set-neutral-color(clr-neutral-500));
 }
 
 @mixin anchor-three-styles {
-  @include anchor-default(func.set-neutral-color(var.$clr-neutral-400));
-  @include background-transition-basic(func.set-neutral-color(var.$clr-neutral-500), func.set-neutral-color(var.$clr-neutral-400), true);
+  @include anchor-default(func.set-neutral-color(clr-neutral-400));
+  @include background-transition-basic(func.set-neutral-color(clr-neutral-500), func.set-neutral-color(clr-neutral-400), true);
 }
 
 @mixin anchor-four-styles {
-  @include anchor-default(func.set-neutral-color(var.$clr-neutral-500));
-  @include background-transition-skew(func.set-neutral-color(var.$clr-neutral-300), func.set-neutral-color(var.$clr-neutral-500), true);
+  @include anchor-default(func.set-neutral-color(clr-neutral-500));
+  @include background-transition-skew(func.set-neutral-color(clr-neutral-300), func.set-neutral-color(clr-neutral-500), true);
 }
 
 @mixin anchor-outline-styles {
@@ -165,20 +165,20 @@
 }
 
 //**************** buttons ****************//
-@mixin button-default($font: var.$ff-primary-font) {
+@mixin button-default($font: var.$ff-secondary-font) {
   padding: 16px 32px;
   font-family: $font;
   font-size: medium;
-  border: 1px solid func.set-neutral-color(var.$clr-neutral-300);
+  border: 1px solid func.set-neutral-color(clr-neutral-300);
   outline: none;
-  color: func.set-neutral-color(var.$clr-neutral-700);
-  background-color: func.set-neutral-color(var.$clr-neutral-400);
+  color: func.set-neutral-color(clr-neutral-700);
+  background-color: func.set-neutral-color(clr-neutral-400);
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   &:hover,
   &:focus {
     cursor: pointer;
-    color: func.set-neutral-color(var.$clr-neutral-700);
+    color: func.set-neutral-color(clr-neutral-700);
 
   }
 }
@@ -206,19 +206,19 @@
 
 @mixin button-two-styles() {
   @include button-default();
-  @include background-transition-basic(func.set-neutral-color(var.$clr-neutral-700), func.set-neutral-color(var.$clr-neutral-400));
+  @include background-transition-basic(func.set-neutral-color(clr-neutral-700), func.set-neutral-color(clr-neutral-400));
 
 }
 
 @mixin button-three-styles() {
   @include button-default();
-  @include background-transition-basic(func.set-neutral-color(var.$clr-neutral-600), func.set-neutral-color(var.$clr-neutral-300), true);
+  @include background-transition-basic(func.set-neutral-color(clr-neutral-600), func.set-neutral-color(clr-neutral-300), true);
 
 }
 
 @mixin button-four-styles() {
   @include button-default();
-  @include background-transition-skew(func.set-neutral-color(var.$clr-neutral-700), func.set-neutral-color(var.$clr-neutral-500), true);
+  @include background-transition-skew(func.set-neutral-color(clr-neutral-700), func.set-neutral-color(clr-neutral-500), true);
 
 }
 

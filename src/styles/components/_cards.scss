@@ -1,0 +1,61 @@
+/*=============================================
+          components/_cards.scss
+================================================*/
+@use './../abstracts' as ab;
+
+#card-container-one.card-container {
+  margin-top: 3em;
+  margin-bottom: 3em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+
+  .card-one {
+    background: var(--white);
+    background-color: ab.set-neutral-color(clr-neutral-200);
+    padding: .33em;
+    border-radius: 3px;
+    border: 1px solid ab.set-neutral-color(clr-neutral-300);
+
+    box-shadow: 8px 13px 32px -4px rgba(0, 0, 0, 0.5);
+
+    &__caption--title {
+      margin-top: .75em !important;
+      font-family: ab.set-font-family(ff-small-caps-font-serif);
+    }
+    &__button-container {
+      margin-bottom: .75em;
+    }
+
+  }
+
+}
+
+#card-container-two.card-container {
+  margin-top: 3em;
+  margin-bottom: 3em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+
+  .card-two {
+    figure.imghvr-stack-up {
+
+      figcaption {
+        padding: 16px;
+
+        h3 {
+          margin-top: 4px;
+          margin-bottom: 8px;
+          font-family: ab.set-font-family(ff-small-caps-font-serif);
+
+        }
+      }
+    }
+  }
+}
+

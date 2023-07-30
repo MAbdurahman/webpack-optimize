@@ -1,0 +1,26 @@
+/*=============================================
+          components/_buttons.scss
+================================================*/
+@use './../abstracts' as ab;
+
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+
+  .button--one {
+    @include ab.button-one-styles(ab.set-neutral-color(clr-neutral-200), ab.set-neutral-color(clr-neutral-800));
+  }
+
+  .button--two {
+    @include ab.button-two-styles();
+  }
+
+  .button--three {
+    @include ab.button-three-styles();
+  }
+
+  .button--four {
+    @include ab.button-four-styles();
+  }
+
+}
