@@ -3,7 +3,10 @@
 ================================================*/
 @use "./../abstracts/variables" as var;
 
-html {font-size: 100%;} /*16px*/
+html {
+  font-size: 100%;/*16px*/
+
+}
 
 body {
   z-index: 1;

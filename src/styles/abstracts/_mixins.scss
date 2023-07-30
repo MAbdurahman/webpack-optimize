@@ -312,7 +312,7 @@
 @mixin vendor-prefix-one($property, $value, $vendors: webkit moz ms o) {
   @if $vendors {
     @each $vendor in $vendors {
-      #{"-" + $vendor + "-" + $property}: #{$value};
+      #{'-' + $vendor + '-' + $property}: #{$value};
     }
   }
   #{$property}: #{$value};
@@ -322,10 +322,34 @@
   @each $prop, $value in $map {
     @if $vendors {
       @each $vendor in $vendors {
-        #{"-" + $vendor + "-" + $prop}: #{$value};
+        #{'-' + $vendor + '-' + $prop}: #{$value};
       }
     }
     // Dump regular property anyway
     #{$prop}: #{$value};
+  }
+}
+
+
+@mixin font-face($name, $file) {
+  @font-face {
+    font-family: "#{$name}";
+    src: url("./assets/fonts/#{$file}.eot");
+    src: url("./assets/fonts/#{$file}.eot?#iefix") format("embedded-opentype"),
+    url("./assets/fonts/#{$file}.woff") format("woff"),
+    url("./assets/fonts/#{$file}.ttf") format("truetype"),
+    url("./assets/fonts/#{$file}.svg?#webfont") format("svg");
+  }
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
   }
 }
