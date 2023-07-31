@@ -121,3 +121,11 @@
   }
   @return map-get(var.$font-families, $font-name);
 }
+
+@function set-timing-function($timing-function-name) {
+  @if not map-has-key(var.$timing-functions, $timing-function-name) {
+    @error 'No timing-function named `#{$timing-function-name}` in $timing-functions!  '
+      + 'Timing-function should be one of the following: `#{map-keys(var.$timing-functions)}`.';
+  }
+  @return map-get(var.$timing-functions, $timing-function-name);
+}
