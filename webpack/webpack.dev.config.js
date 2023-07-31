@@ -56,6 +56,16 @@ module.exports = merge(common, {
         generator: {
           filename: './assets/img/[name][ext]'
         }
+      },
+      {
+        test: /\.(gif)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[hash].[ext]',
+            outputPath: './assets/img/gif'
+          }
+        }
       }
     ]
   },
