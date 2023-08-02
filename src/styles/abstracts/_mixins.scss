@@ -308,6 +308,47 @@
 
 }
 
+//**************** fluid typography ****************//
+
+
+
+@mixin fluid-typography-one($min-vw, $max-vw, $min-value, $max-value) {
+  $factor: 1 / ($max-vw - $min-vw) * ($max-value - $min-value);
+  $calc-value: unquote('#{ $min-value - ($min-vw * $factor) } + #{ 100vw * $factor }');
+
+  font-size: $min-value;
+
+  @media screen and (min-width: #{ $min-vw }) {
+    font-size: calc(#{$calc-value});
+  }
+
+  @media screen and (min-width: #{ $max-vw }) {
+    font-size: $max-value;
+  }
+}
+
+
+@mixin fluid-typography-two($min-vw, $max-vw, $min-value, $max-value) {
+  $factor: 1 / ($max-vw - $min-vw) * ($max-value - $min-value);
+  $calc-value: unquote('#{ $min-value - ($min-vw * $factor) } + #{ 100vw * $factor }');
+
+  font-size: $min-value; // Fallback for older browsers
+  font-size: clamp(#{if($min-value > $max-value, $max-value, $min-value)}, #{$calc-value}, #{if($min-value > $max-value, $min-value, $max-value)});
+}
+
+
+
+/*====== example of usages ==================
+p {
+	// Calling the mixin below…
+	@include fluid-type(20rem, 64rem, 1rem, 2rem);
+
+	// … outputs the following:
+	font-size: 1rem;
+	font-size: clamp(1rem, 0.5454545455rem + 2.2727272727vw, 2rem);
+}
+ =============================================*/
+
 //**************** vendor prefixes ****************//
 @mixin vendor-prefix-one($property, $value, $vendors: webkit moz ms o) {
   @if $vendors {
