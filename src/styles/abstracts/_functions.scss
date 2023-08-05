@@ -94,7 +94,6 @@
 
 }
 
-
 @function set-semantic-alert-color($color-name) {
   @if not map-has-key(var.$semantic-alert-colors, $color-name) {
     @error 'No color named `#{$color-name}` in $semant-alert-colors!  '
@@ -141,6 +140,14 @@
       + 'Font should be one of the following: `#{map-keys(var.$font-families)}`.';
   }
   @return map-get(var.$font-families, $font-name);
+}
+
+@function set-font-weight($font-weight) {
+  @if not map-has-key(var.$font-weights, $font-weight) {
+    @error 'No font weight `#{$font-weight}` defined in $font-weights!  '
+      + 'Font weight should be one of the following: `#{map-keys(var.$font-weights)}`.';
+  }
+  @return map-get(var.$font-weights, $font-weight);
 }
 
 @function set-timing-function($timing-function-name) {

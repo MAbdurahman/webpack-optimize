@@ -204,9 +204,13 @@ $ff-secondary-font: 'Alegreya Sans', sans-serif;
 $ff-small-capitals-sans: 'Alegreya Sans SC', sans-serif;
 $ff-small-capitals-serif: 'Alegreya SC', serif;
 
+
+$fw-font-weight-thin: 100;
+$fw-font-weight-light: 300;
 $fw-font-weight-normal: 400;
 $fw-font-weight-medium: 500;
 $fw-font-weight-bold: 700;
+$fw-font-weight-bolder: 900;
 
 $font-families: (
         'ff-body-font': $ff-secondary-font,
@@ -215,6 +219,14 @@ $font-families: (
         'ff-small-caps-font-serif': $ff-small-capitals-serif
 );
 
+$font-weights: (
+        'fw-font-weight-thin': $fw-font-weight-thin,
+        'fw-font-weight-light': $fw-font-weight-light,
+        'fw-font-weight-normal': $fw-font-weight-normal,
+        'fw-font-weight-medium': $fw-font-weight-medium,
+        'fw-font-weight-bold': $fw-font-weight-bold,
+        'fw-font-weight-bolder': $fw-font-weight-bolder
+);
 
 //**************** timing functions ****************//
 $tf-timing-function-basic-01: cubic-bezier(0.26, 0.1, 0.27, 1.55);
