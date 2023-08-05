@@ -137,7 +137,7 @@
 @function set-font-family($font-name) {
   @if not map-has-key(var.$font-families, $font-name) {
     @error 'No font named `#{$font-name}` in $font-families!  '
-      + 'Font should be one of the following: `#{map-keys(var.$font-families)}`.';
+      + 'Font name should be one of the following: `#{map-keys(var.$font-families)}`.';
   }
   @return map-get(var.$font-families, $font-name);
 }

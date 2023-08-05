@@ -5,7 +5,7 @@
 @use './../abstracts/variables' as var;
 @use './animations' as anim;
 
-.ma-container-fluid {
+.u-container-fluid {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -13,7 +13,7 @@
   padding-right: 16px;
 }
 
-.ma-container {
+.u-container {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -22,35 +22,34 @@
 }
 
 @media (min-width: 576px) {
-  .ma-container {
+  .u-container {
     max-width: 540px;
   }
 }
 
 @media (min-width: 768px) {
-  .ma-container {
+  .u-container {
     max-width: 720px;
   }
 }
 
 @media (min-width: 992px) {
-  .ma-container {
+  .u-container {
     max-width: 960px;
   }
 }
 
 @media (min-width: 1200px) {
-  .ma-container {
+  .u-container {
     max-width: 1144px;
   }
 }
 
 @media (min-width: 1400px) {
-  .ma-container {
+  .u-container {
     max-width: 1320px;
   }
 }
-
 
 .content-box-lg {
   width: 100%;
@@ -58,11 +57,34 @@
   padding-top: 1.25em;
 }
 
-.img-responsive {
+/*If you want the image to scale both up and down on responsiveness,
+set CSS width property to 100% and height to auto*/
+.u-img-responsive-up-and-down {
+  width: 100%;
+  height: auto;
+}
+
+/*If you want the image to scale down if it has to, but never scale up
+to be larger than its original size, use CSS max-width property to 100%
+and height to auto*/
+.u-img-responsive-down {
+  max-width: 100%;
+  height: auto;
+}
+
+/*If you want to restrict the image to a maximum size, set CSS width property
+to 100%, max-width property to a pixel value of choice, and height to auto*/
+.u-img-responsive-up-to {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.u-img-responsive {
   vertical-align: middle;
 }
 
-.img-thumbnail {
+.u-img-thumbnail {
   display: inline-block;
   max-width: 100%;
   height: auto;
@@ -78,9 +100,9 @@
   -o-border-radius: 4px;
 }
 
-.img-responsive,
-.thumbnail>img,
-.thumbnail a>img {
+.u-img-responsive,
+.u-thumbnail > img,
+.u-thumbnail a > img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -88,34 +110,34 @@
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
-.scrollbar-hidden::-webkit-scrollbar {
+.u-scrollbar-hidden::-webkit-scrollbar {
   display: none;
 }
 
 /* Hide scrollbar for IE, Edge add Firefox */
-.scrollbar-hidden {
+.u-scrollbar-hidden {
   -ms-overflow-style: none;
   scrollbar-width: none; /* Firefox */
 }
 
 
-.section {
+.u-section {
   width: 100vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
 
-.title-heading {
+.u-title-heading {
   position: relative;
-  margin-bottom: 5rem;
-  padding: 2rem 0;
+  margin-bottom: 5em;
+  padding: 2em 0;
   font-size: 3rem;
   font-weight: 100;
   letter-spacing: 2px;
   text-transform: capitalize;
   text-align: center;
-  margin-bottom: .5em;
+  /*margin-bottom: .5em;*/
   /*font-family: ab.$ff-secondary-font;*/
   font-family: var.$ff-primary-font;
   /*color: ab.set-color(clr-off-black);*/
@@ -126,46 +148,70 @@
 .u-text-center {
   text-align: center;
 }
+
 .u-margin-bottom-small {
   margin-bottom: 1.5em;
 }
+
 .u-margin-bottom-medium {
   margin-bottom: 4em;
 }
+
 .u-margin-bottom-large {
   margin-bottom: 8em;
 }
 
-.wrapper {
+.u-wrapper {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 16px;
   padding-right: 16px;
 }
+
 @media screen and (min-width: 576px) {
-  .wrapper {
+  .u-wrapper {
     max-width: 560px;
   }
 }
+
 @media screen and (min-width: 768px) {
-  .wrapper {
+  .u-wrapper {
     max-width: 720px;
   }
 }
+
 @media screen and (min-width: 992px) {
-  .wrapper {
+  .u-wrapper {
     max-width: 960px;
   }
 }
+
 @media screen and (min-width: 1200px) {
-  .wrapper {
+  .u-wrapper {
     max-width: 1144px;
   }
 }
+
 @media screen and (min-width: 1400px) {
-  .wrapper {
+  .u-wrapper {
     max-width: 1320px;
+  }
+}
+
+.u-fluid-box {
+  width: 200px;
+}
+
+@media screen and (min-width: 20em) { // 320px
+  .u-fluid-box {
+    width: calc(200px + 300 * ((100vw - 320px) / 960));
+  }
+}
+
+@media screen and (min-width: 80em) { //1200px
+  .u-fluid-box {
+    width: 500px;
   }
 }
 
@@ -206,7 +252,6 @@
   display: inline-block;
   margin: 0px;
   max-width: 100%;
-
 
   background-color: func.set-neutral-color(clr-neutral-700) !important;
   color: var.$clr-neutral-100;
