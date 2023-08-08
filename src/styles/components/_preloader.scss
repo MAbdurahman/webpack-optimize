@@ -9,8 +9,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  /*background-image: radial-gradient(circle, #ffffff 28%, #ffffff 100%);*/
-  background-image: radial-gradient(circle, rgb(35,31,32) 28%, rgb(35,31,32) 100%);
+  background-image: radial-gradient(circle, ab.set-neutral-color(clr-neutral-800) 28%, ab.set-neutral-color(clr-neutral-800) 100%);
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
