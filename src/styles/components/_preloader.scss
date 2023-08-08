@@ -1,0 +1,32 @@
+/*=============================================
+          components/_preloader.scss
+================================================*/
+@use './../abstracts' as ab;
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /*background-image: radial-gradient(circle, #ffffff 28%, #ffffff 100%);*/
+  background-image: radial-gradient(circle, rgb(35,31,32) 28%, rgb(35,31,32) 100%);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+#preloader-gif {
+  width: 33.333%;
+  align-self: center;
+}
+
+@media screen and (max-width: 768px) {
+  #preloader-gif {
+    width: 60%;
+  }
+}

@@ -46,7 +46,7 @@ module.exports = merge(common, {
         use: [ 'style-loader', 'css-loader', 'sass-loader' ]
       },
       {
-        test: /\.(png|jpg|svg)$/,
+        test: /\.(jpeg|jpg|png|svg)$/,
         type: 'asset',
         parser: {
           dataUrlCondition: {
@@ -55,6 +55,18 @@ module.exports = merge(common, {
         },
         generator: {
           filename: './assets/img/[name][ext]'
+        }
+      },
+      {
+        test: /\.(gif)$/,
+        type: 'asset',
+        parser: {
+          dataUrlCondition: {
+            maxSize: 10 * 1024 // 10 kb
+          }
+        },
+        generator: {
+          filename: './assets/gif/[name][ext]'
         }
       }
     ]
