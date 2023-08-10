@@ -1,5 +1,4 @@
 
-
 /*=============================================
           index.scss
 ================================================*/
@@ -9,7 +8,6 @@
 @use './base/animations';
 @use './base/utils';
 
-
 //abstract styles
 @use './abstracts/functions';
 @use './abstracts/mixins';
@@ -18,74 +16,8 @@
 //components styles
 @use './components/preloader';
 @use './components/header';
-@use './components/buttons';
 @use './components/anchors';
+@use './components/buttons';
 @use './components/cards';
 
 
-
-$clr-primary-200: hsla(210, 67%, 86%, 100%);
-$clr-primary-100: hsla(210, 67%, 98%, 100%);
-$clr-primary-300: hsla(210, 67%, 68%, 100%);
-$clr-primary-400: hsla(210, 68%, 60%, 100%);
-$clr-primary-500: hsla(210, 67%, 44%, 100%);
-$clr-primary-600: hsla(210, 67%, 39%, 100%);
-$clr-primary-700: hsla(210, 67%, 34%, 100%);
-$clr-primary-800: hsla(210, 67%, 29%, 100%);
-
-
-
-
-$clr-neutral-100: hsla(0, 0%, 98%, 100%);
-$clr-neutral-200: hsla(0, 0%, 94%, 100%);
-$clr-neutral-300: hsla(0, 0%, 85%, 100%);
-$clr-neutral-400: hsla(0, 0%, 75%, 100%);
-$clr-neutral-500: hsla(0, 0%, 60%, 100%);
-$clr-neutral-600: hsla(0, 0%, 38%, 100%);
-$clr-neutral-700: hsla(0, 0%, 19%, 100%);
-$clr-neutral-800: hsla(0, 0%, 7%, 100%);
-
-body {
-    font-family: 'Alegreya Sans', sans-serif;
-    font-size: 1rem;
-    color: $clr-neutral-600;
-    /*display: grid;*/
-    transition: all .5s;
-    user-select: none;
-    background-image: radial-gradient(circle, $clr-neutral-400 28%, $clr-neutral-400 100%);
-}
-
-
-/* ==========================================
-              button
-============================================= */
-.button {
-    padding: 16px 32px;
-    /*border: 3px solid #1d8ace;*/
-    border: 3px solid $clr-primary-800;
-    border-radius: 5px;
-    /*color: #1d8ace;*/
-    color: $clr-primary-800;
-    /*background-color: #d9d9d9;*/
-    background-color: $clr-neutral-200;
-    font-size: medium;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: all 0.5s;
-}
-.button:hover {
-    /*color: #f2f2f2;*/
-    color: $clr-neutral-300;
-    /*background: #1d8ace radial-gradient(circle, transparent 1%, #1d8ace 1%) center/15000%;*/
-    background: $clr-primary-600 radial-gradient(circle, transparent 1%, $clr-primary-600 1%) center/15000%;
-
-}
-
-.button:active {
-    /*background-color: #095b8d;*/
-    background-color: $clr-primary-700;
-    background-size: 100%;
-    transition: all 0s;
-}
