@@ -9,36 +9,41 @@
   height: 100vh;
   min-width: 100vw;
   min-height: 100vh;
-  background-image: linear-gradient(180deg, rgba(ab.set-neutral-color(clr-neutral-600), .8), rgba(ab.set-neutral-color(clr-neutral-700), .8)), url('./../../assets/img/cubism-grid.svg');
+  background-image: linear-gradient(180deg, rgba(ab.set-neutral-color(clr-neutral-600), 0.75), rgba(ab.set-neutral-color(clr-neutral-700), .8)), url('./../../assets/img/cubism-grid.svg');
   background-size: cover;
   background-position: center;
-
   color: ab.set-neutral-color(clr-neutral-100);
 
   &__nav {
 
   }
-  &__hero {
-    height: 90%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
-    &--inner {
-      height: 75%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      align-content: center;
-      row-gap: 0.25em;
+  &__hero {
+    width: 100%;
+    @include ab.center-position(both);
+    text-align: center;
+
+    &__title {
+      text-transform: uppercase;
+      margin-bottom: 0;
+
     }
-    &--outer {
-      height: 25%;
+
+    &__sub-title {
+      margin-top: 0;
+      margin-bottom: 1em;
+      text-transform: capitalize;
+      font-family: ab.set-font-family(ff-body-font);
+      letter-spacing: 1px;
+
+    }
+
+    &__button {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 1.25rem;
+      border-radius: 3px;
 
     }
   }
-
-
-
 }
