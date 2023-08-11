@@ -60,6 +60,14 @@
             font-size: 16px;
             font-weight: ab.set-font-weight(fw-font-weight-medium);
             color: ab.set-augmented-color(clr-augmented-100);
+            transition: color 0.33s ab.set-timing-function(tf-timing-function-ease-in-out);
+
+            &.active,
+            &:hover {
+              color: ab.set-neutral-color(clr-neutral-100);
+            }
+            @include ab.anchor-underline-hover-effect();
+
           }
         }
       }
