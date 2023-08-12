@@ -21,5 +21,6 @@ $(function () {
 
   hamburger.addEventListener('click', function() {
     hamburger.classList.toggle('header__navbar__contents__hamburger--open');
+    navbar_navigation.classList.toggle('header__navbar__contents__nav--open');
   })
 });
