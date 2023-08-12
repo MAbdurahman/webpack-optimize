@@ -1,30 +1,51 @@
 /*=============================================
          base/ _typography.scss
 ================================================*/
-@use "./../abstracts/variables" as var;
+/* @use "./../abstracts/variables" as var; */
+@use './../abstracts' as ab;
 
 html {
   font-size: 100%;/*16px*/
 
 }
+@include ab.responsive-max-width(420px) {
+    html {
+      font-size:  83.333%;
+    }
+  }
+  @include ab.responsive-max-width(360px) {
+    html {
+      font-size: 66.667%;
+    }
+  }
+  @include ab.responsive-max-width(320px) {
+    html {
+      font-size: 55%;
+    }
+  }
 
 body {
   z-index: 1;
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
   background: #D1D1D1;
-  font-family: var.$ff-secondary-font;
-  font-weight: 400;
+  background-image: radial-gradient(circle, ab.$clr-neutral-300 28%, ab.$clr-neutral-400 100%);
+  font-family: ab.$ff-secondary-font;
+  font-weight: ab.set-font-weight(fw-font-weight-normal);
+  line-height: 1.75;
+  color: ab.set-augmented-color(clr-augmented-800);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.75;
-  color: #000000;
 }
 
 p {margin-bottom: 1rem;}
 
 h1, h2, h3, h4, h5 {
   margin: 3rem 0 1.38rem;
-  font-family: var.$ff-primary-font;
+  font-family: ab.$ff-primary-font;
   font-weight: 400;
   line-height: 1.3;
 }

@@ -4,105 +4,178 @@
 @use './../abstracts' as ab;
 
 .header {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  min-width: 100vw;
-  min-height: 100vh;
-  background-image: linear-gradient(180deg, rgba(ab.set-neutral-color(clr-neutral-600), 0.75), rgba(ab.set-neutral-color(clr-neutral-700), .8)), url('./../../assets/img/cubism-grid.svg');
-  background-size: cover;
-  background-position: center;
-  color: ab.set-neutral-color(clr-neutral-100);
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	min-width: 100vw;
+	min-height: 100vh;
+	background-image: linear-gradient(
+			180deg,
+			rgba(ab.set-neutral-color(clr-neutral-600), 0.75),
+			rgba(ab.set-neutral-color(clr-neutral-700), 0.8)
+		),
+		url('./../../assets/img/cubism-grid.svg');
+	background-size: cover;
+	background-position: center;
+	color: ab.set-neutral-color(clr-neutral-100);
 
-  &__navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-height: 60px;
-    width: 100%;
+	&__navbar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		min-height: 60px;
+		width: 100%;
+		background-color: ab.set-neutral-color(clr-neutral-700);
 
-    background-color: ab.set-neutral-color(clr-neutral-700);
+		&__contents {
+			width: 80vw;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 16px 32px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
 
-    &__nav {
-      width: 80vw;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 16px 32px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
+			&__logo {
+				display: block;
+				text-transform: capitalize;
+				letter-spacing: -0.5px;
+				font-family: ab.set-font-family(ff-heading-font);
+				font-size: 28px;
+				font-weight: ab.set-font-weight(fw-font-weight-bolder);
+				color: ab.set-neutral-color(clr-neutral-300);
+			}
 
-      &__logo {
-        text-transform: capitalize;
-        letter-spacing: -0.5px;
-        font-family: ab.set-font-family(ff-heading-font);
-        font-size: 24px;
-        font-weight: ab.set-font-weight(fw-font-weight-bolder);
-        color: ab.set-neutral-color(clr-neutral-300);
+			&__nav {
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-end;
+
+				&__list {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-evenly;
+					column-gap: 40px;
+
+					&__item {
+						&__link {
+							text-transform: uppercase;
+							letter-spacing: 1px;
+							font-family: ab.set-font-family(ff-body-font);
+							font-weight: ab.set-font-weight(fw-font-weight-medium);
+							font-size: 16px;
+							color: ab.set-augmented-color(clr-augmented-100);
+							transition: color 0.33s
+								ab.set-timing-function(tf-timing-function-ease-in-out);
+
+							&.active,
+							&:hover {
+								color: ab.set-neutral-color(clr-neutral-100);
+							}
+							@include ab.anchor-underline-hover-effect();
+						}
+					}
+				}
+			}
+		}
+		/* &__hamburger {
+			display: none;
+
+      &__bar {
+        height: 2px;
+        width: 27px;
+        margin: 5px 0;
+        background-color: rgba(ab.set-neutral-color(clr-neutral-100), 0.8);
+        transition: all 0.33s ab.set-timing-function(tf-timing-function-snappy);
       }
-      &__list {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        column-gap: 40px;
-        transition: transform 0.33s ab.set-timing-function(tf-timing-function-snappy);
-
-        &--open {
-          transform: translateX(0) !important;
-        }
-        &__item {
-
-          &__link {
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-family: ab.set-font-family(ff-body-font);
-            font-size: 16px;
-            font-weight: ab.set-font-weight(fw-font-weight-medium);
-            color: ab.set-augmented-color(clr-augmented-100);
-            transition: color 0.33s ab.set-timing-function(tf-timing-function-ease-in-out);
-
-            &.active,
-            &:hover {
-              color: ab.set-neutral-color(clr-neutral-100);
-            }
-            @include ab.anchor-underline-hover-effect();
-
-          }
-        }
-      }
+		} */
+	}
 
 
+  .header__navbar__contents__hamburger {
+    display: none;
+    cursor: pointer;
+    &__bar {
+      height: 2px;
+      width: 27px;
+      margin: 5px 0;
+      background-color: rgba(ab.set-neutral-color(clr-neutral-100), 0.8);
+      transition: all 0.33s ab.set-timing-function(tf-timing-function-snappy);
     }
 
   }
 
-  &__hero {
-    width: 100%;
-    @include ab.center-position(both);
-    text-align: center;
-
-    &__title {
-      text-transform: uppercase;
-      margin-bottom: 0;
-
-    }
-
-    &__sub-title {
-      margin-top: 0;
-      margin-bottom: 1em;
-      text-transform: capitalize;
-      font-family: ab.set-font-family(ff-body-font);
-      letter-spacing: 1px;
-
-    }
-
-    &__button {
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 1.25rem;
-      border-radius: 3px;
-
-    }
+  .header__navbar__contents__hamburger--open .header__navbar__contents__hamburger__bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
   }
+  .header__navbar__contents__hamburger--open .header__navbar__contents__hamburger__bar:nth-child(2) {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  
+  .header__navbar__contents__hamburger--open .header__navbar__contents__hamburger__bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  
+
+@include ab.responsive-max-width(1100px) {
+	.header__navbar__contents {
+		width: 90vw;
+	}
 }
+@include ab.responsive-max-width(920px) {
+	.header__navbar__contents {
+		width: 98vw;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 16px 32px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+
+		&__nav {
+			display: none;
+		}
+
+		&__hamburger {
+			display: block;
+		}
+	}
+}
+@include ab.responsive-max-width(920px) {
+    .header__navbar__contents__hamburger {
+      display: block;
+    }
+  }
+
+
+	&__hero {
+		width: 100%;
+		@include ab.center-position(both);
+		text-align: center;
+
+		&__title {
+			text-transform: uppercase;
+			margin-bottom: 0;
+		}
+
+		&__sub-title {
+			margin-top: 0;
+			margin-bottom: 1em;
+			text-transform: capitalize;
+			font-family: ab.set-font-family(ff-body-font);
+			letter-spacing: 1px;
+		}
+
+		&__button {
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			font-size: 1.25rem;
+			border-radius: 3px;
+		}
+	}
+}
+
