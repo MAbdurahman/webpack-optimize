@@ -24,27 +24,6 @@
   }
 }
 
-@function round-number-off($number, $decimals: 0) {
-  $n: 1;
-  @if $decimals > 0 {
-    @for $i from 1 through $decimals {
-      $n: $n * 10;
-    }
-  }
-  @return math.div(math.round($number * $n), $n);
-
-}
-
-@function set-fluid-typography($min-size, $max-size, $min-breakpoint, $max-breakpoint, $unit: vw) {
-  $slope: math.div($max-size - $min-size, $max-breakpoint - $min-breakpoint);
-  $slope-to-unit: round-number-off($slope * 100, 2);
-  $intercept-rem: round-number-off(convert-to-rem($min-size - $slope * $min-breakpoint), 2);
-  $min-size-rem: round-number-off(convert-to-rem($min-size), 2);
-  $max-size-rem: round-number-off(convert-to-rem($max-size), 2);
-
-  @return clamp(#{$min-size-rem}, #{$slope-to-unit}#{$unit} + #{$intercept-rem}, #{$max-size-rem});
-}
-
 @function set-primary-color($color-name) {
   @if not map-has-key(var.$primary-colors, $color-name) {
     @error 'No color named `#{$color-name}` in $primary-colors!  '
