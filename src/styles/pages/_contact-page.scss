@@ -1,0 +1,19 @@
+/*=============================================
+         pages/_contact-page.scss
+================================================*/
+@use './../abstracts' as ab;
+
+.contact__section {
+   width: 100%;
+   
+   background-color: ab.set-neutral-color(clr-neutral-600);
+
+   &__title {
+      margin-top: 0;
+      padding-top: 2.75em;
+      text-align: center;
+      text-transform: uppercase;
+
+   }
+   
+}

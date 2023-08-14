@@ -123,6 +123,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 
 .u-section {
   width: 100vw;
+  min-height: 90vh;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
