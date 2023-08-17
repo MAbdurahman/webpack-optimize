@@ -4,15 +4,70 @@
 @use './../abstracts' as ab;
 
 .about__section {
-   width: 100%;
-   
-   background-color: ab.set-neutral-color(clr-neutral-400);
+  position: relative;
+  width: 100%;
 
-   &__title {
-      margin-top: 0;
-      padding-top: 2.75em;
-      text-align: center;
-      text-transform: uppercase;
-   }
-   
+  background-color: ab.set-neutral-color(clr-neutral-400);
+
+  display: flex;
+  flex-direction: row;
+
+  &__left {
+    flex-basis: 50%;
+
+    background-color: ab.set-neutral-color(clr-neutral-200);
+    &--inner {
+      width: 66%;
+      @include ab.align-element(both);
+      position: relative;
+    }
+  }
+
+  &__right {
+    flex-basis: 50%;
+    /*padding: 16px 10em 32px;*/
+    padding: 16px 10em 16px 32px;
+
+    /*padding-right: 10em;*/
+    background-color: ab.set-neutral-color(clr-neutral-200);
+
+    &--inner {
+      margin-top: 15%;
+      @include ab.flex-center-horizontal();
+      flex-direction: column;
+      &__title {
+        margin-top: 0;
+        padding-top: 2.75em;
+        text-align: left;
+        text-transform: uppercase;
+        color: ab.set-augmented-color(clr-augmented-800);
+      }
+
+      &__info {
+        font-size: 1.25rem;
+      }
+
+      &__button__container {
+
+
+        &__button {
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-size: 1.25rem;
+          /* font-size: clamp(1rem, 2.5vw, 1.25rem); */
+          color: ab.set-neutral-color(clr-neutral-300);
+          border-radius: 3px;
+
+          :hover {
+            color: ab.set-neutral-color(clr-neutral-100);
+          }
+        }
+      }
+
+
+    }
+
+  }
+
+
 }
