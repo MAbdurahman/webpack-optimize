@@ -6,7 +6,7 @@ import './../styles/index.scss';
 ================================================*/
 $(window).on('load', function () {
     // makes sure that whole site is loaded
-    $('#preloader-gif, #preloader').fadeOut(8000, function () {
+    $('#preloader-gif, #preloader').fadeOut(5000, function () {
     });
 });
 
