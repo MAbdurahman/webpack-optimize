@@ -36,8 +36,8 @@ body {
   background-image: radial-gradient(circle, ab.$clr-neutral-300 28%, ab.$clr-neutral-400 100%);
   font-family: ab.$ff-secondary-font;
   font-weight: ab.set-font-weight(fw-font-weight-normal);
-  line-height: 1.75;
-  color: ab.set-augmented-color(clr-augmented-800);
+  line-height: 1.5;
+  color: ab.set-augmented-color(clr-augmented-700);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
