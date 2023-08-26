@@ -121,7 +121,7 @@
 			width: 90vw;
 		}
 	}
-	@include ab.responsive-max-width(920px) {
+	@include ab.responsive-max-width(991px) {
 		.header__navbar__contents {
 			/*width: 98vw;
 			margin-left: auto;
@@ -166,7 +166,7 @@
 			}
 		}
 	}
-	@include ab.responsive-max-width(920px) {
+	@include ab.responsive-max-width(991px) {
 		.header__navbar__contents__hamburger {
 			display: block;
 		}
