@@ -39,6 +39,7 @@
 			color: ab.set-neutral-color(clr-neutral-300);
 			border: 1px solid ab.set-neutral-color(clr-neutral-300);
 			border-radius: 3px;
+			box-shadow: ab.set-box-shadow(bs-box-shadow-100);
 
 			&__title {
 				text-transform: capitalize;

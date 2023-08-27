@@ -5,8 +5,6 @@
 @use './variables' as var;
 
 
-
-
 $default-min-bp: 320px;
 $default-max-bp: 960px;
 
@@ -165,4 +163,12 @@ $default-max-bp: 960px;
       + 'Timing-function should be one of the following: `#{map-keys(var.$timing-functions)}`.';
   }
   @return map-get(var.$timing-functions, $timing-function-name);
+}
+
+@function set-box-shadow($box-shadow-name) {
+  @if not map-has-key(var.$box-shadows, $box-shadow-name) {
+    @error 'No box-shadow named `#{$box-shadow-name}` defined in $box-shadows! '
+     + 'Box shadow name should be one of the following:  `#{map-keys(var.$box-shadows)}`.'
+  }
+  @return map-get(var.$box-shadows, $box-shadow-name);
 }
